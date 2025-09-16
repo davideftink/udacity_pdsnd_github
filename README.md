@@ -5,10 +5,11 @@
 BikeShare application
 
 ### Description
-Describe what your project is about and what it does
+BikeShare Python application used to explore BikeShare systems data.
 
 ### Files used
 Include the files used
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://github.com/udacity/pdsnd_github
+https://video.udacity-data.com/topher/2025/July/6881a1ef_bikeshare-starter/bikeshare-starter.zip

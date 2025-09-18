@@ -1,3 +1,8 @@
+"""
+Name: BikeShare Systems Data Explore Application
+Date: 2025.09.18
+"""
+
 import time
 import pandas as pd
 import numpy as np

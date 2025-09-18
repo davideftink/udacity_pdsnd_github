@@ -45,6 +45,29 @@ def load_data(city, month, day):
     return df
 
 
+def get_raw_data(df):
+    """Displays the raw data 5 rows at a time."""
+    
+    # Prompt to display raw data
+    show_data = input("Would you like see the raw data? Enter yes or no.\n")
+    if show_data.lower() in ['yes', 'y']:
+        row_index = 0
+        get_next = 'y'
+        row_count = len(df)
+        print("\nTotal row count: {}".format(row_count))
+        # Display raw data 5 rows at a time
+        while get_next.lower() in ['yes', 'y']:
+            print(df.iloc[row_index:row_index+5])
+            row_index += 5
+            # Prompt to continue with raw data
+            if row_index < row_count:
+                get_next = input('\nDisplay next 5 rows? Enter yes or no.\n')
+            else:
+                get_next = 'n'
+    
+    print('-'*40)
+
+
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -123,8 +146,10 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
+        get_raw_data(df)
+
         stats = input('\nWould you like to see data statistics? Enter yes or no.\n')
-        if stats.lower() in ['yes', 'y']
+        if stats.lower() in ['yes', 'y']:
             time_stats(df)
             station_stats(df)
             trip_duration_stats(df)

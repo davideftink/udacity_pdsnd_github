@@ -1,5 +1,5 @@
 ### Date created
-2025.09.16 - Cloned project
+2025.09.16 - Cloned project and added documentation branch
 
 ### Project Title
 BikeShare application
